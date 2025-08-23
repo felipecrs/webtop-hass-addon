@@ -1,0 +1,26 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Webtop
+version: 0.1.0
+slug: webtop
+description: Full Debian XCFE desktop environment accessible via any modern web browser
+url: https://github.com/felipecrs/webtop-hass-addons/tree/master/webtop
+arch:
+  - amd64
+init: false
+ingress: true
+ingress_port: 3001
+ingress_stream: true
+panel_icon: mdi:remote-desktop
+video: true
+map:
+  - type: data
+    path: /home/xpra-addon
+    read_only: false
+  - type: addon_config
+    path: /config
+    read_only: false
+  - type: media
+    path: /media
+    read_only: false
+ports:
+  8080/tcp: null
