@@ -8,19 +8,20 @@ arch:
   - amd64
 init: false
 ingress: true
-ingress_port: 3001
+ingress_port: 3000
 ingress_stream: true
 panel_icon: mdi:remote-desktop
 video: true
+docker_api: true
 map:
   - type: data
-    path: /home/xpra-addon
+    path: /config
     read_only: false
   - type: addon_config
-    path: /config
+    path: /addon_config
     read_only: false
   - type: media
     path: /media
     read_only: false
 ports:
-  8080/tcp: null
+  3001/tcp: null
