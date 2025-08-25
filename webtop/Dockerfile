@@ -2,6 +2,8 @@ FROM ghcr.io/linuxserver/webtop:debian-xfce-version-2e2e878a
 
 COPY rootfs/ /
 
+RUN ["/opt/webtop-hass-addon/run_custom_build_script.sh"]
+
 ENTRYPOINT ["/opt/webtop-hass-addon/entrypoint.sh"]
 
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 --start-period=15s --start-interval=5s \
