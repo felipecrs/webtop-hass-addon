@@ -14,11 +14,8 @@ panel_icon: mdi:remote-desktop
 video: true
 docker_api: true
 map:
-  - type: data
-    path: /config
-    read_only: false
   - type: addon_config
-    path: /addon_config
+    path: /config
     read_only: false
   - type: media
     path: /media
