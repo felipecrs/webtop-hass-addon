@@ -1,10 +1,9 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Webtop
-image: ghcr.io/felipecrs/webtop-hass-addon
-version: 0.2.0
+version: 0.1.0
 slug: webtop
 description: Full Debian XCFE desktop environment accessible via any modern web browser
-url: https://github.com/felipecrs/webtop-hass-addons/tree/master/webtop
+url: https://github.com/felipecrs/webtop-hass-addons
 arch:
   - amd64
 init: false
