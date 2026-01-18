@@ -17,5 +17,11 @@
       "extractVersionTemplate": "^debian-xfce-(?<version>.+)$",
       "versioningTemplate": "regex:^(?<revision>[0-9a-f]+)-ls(?<minor>[0-9]+)$"
     }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["ghcr.io/linuxserver/webtop"],
+      "minimumGroupSize": 2
+    }
   ]
 }
