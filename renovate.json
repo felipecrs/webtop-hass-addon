@@ -12,8 +12,8 @@
         "version: (?<currentValue>.+)\\n"
       ],
       "datasourceTemplate": "github-releases",
-      "depNameTemplate": "linuxserver/docker-webtop",
-      "packageNameTemplate": "webtop"
+      "packageNameTemplate": "linuxserver/docker-webtop",
+      "depNameTemplate": "webtop"
     }
   ],
   "packageRules": [
