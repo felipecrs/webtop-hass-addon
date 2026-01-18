@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "dependencyDashboard": true,
+  "enabledManagers": ["regex"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$", "^config.yaml$"],
+      "matchStrings": [
+        "FROM ghcr.io/linuxserver/webtop:debian-xfce-(?<currentValue>.+)\\n",
+        "version: (?<currentValue>.+)\\n"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "linuxserver/docker-webtop",
+      "packageNameTemplate": "webtop"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDepNames": ["linuxserver/docker-webtop"],
+      "versionCompatibility": "^(?<compatibility>.+-.+)-(?<version>.+)$",
+      "versioning": "loose"
+    }
+  ]
+}
