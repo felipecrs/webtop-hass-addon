@@ -15,13 +15,7 @@
       "packageNameTemplate": "ghcr.io/linuxserver/webtop",
       "depNameTemplate": "Webtop",
       "extractVersionTemplate": "^debian-xfce-(?<version>.+)$",
-      "versioningTemplate": "loose"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchPackageNames": ["ghcr.io/linuxserver/webtop"],
-      "followTag": "debian-xfce"
+      "versioningTemplate": "regex:^(?<revision>[0-9a-f]+)-ls(?<minor>[0-9]+)$"
     }
   ]
 }
