@@ -11,16 +11,16 @@
         "FROM ghcr.io/linuxserver/webtop:debian-xfce-(?<currentValue>.+)\\n",
         "version: (?<currentValue>.+)\\n"
       ],
-      "datasourceTemplate": "github-releases",
-      "packageNameTemplate": "linuxserver/docker-webtop",
-      "depNameTemplate": "webtop"
+      "datasourceTemplate": "docker",
+      "packageNameTemplate": "ghcr.io/linuxserver/webtop",
+      "depNameTemplate": "Webtop",
+      "versioningTemplate": "loose"
     }
   ],
   "packageRules": [
     {
-      "matchDepNames": ["linuxserver/docker-webtop"],
-      "versionCompatibility": "^(?<compatibility>.+-.+)-(?<version>.+)$",
-      "versioning": "loose"
+      "matchPackageNames": ["ghcr.io/linuxserver/webtop"],
+      "followTag": "debian-xfce"
     }
   ]
 }
