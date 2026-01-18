@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "dependencyDashboard": true,
-  "enabledManagers": ["github-actions", "regex"],
+  "enabledManagers": ["regex"],
   "customManagers": [
     {
       "customType": "regex",
@@ -16,12 +16,7 @@
       "packageNameTemplate": "webtop"
     }
   ],
-    "packageRules": [
-    {
-      "description": "Automerge non-major updates",
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
-    },
+  "packageRules": [
     {
       "matchDepNames": ["linuxserver/docker-webtop"],
       "versionCompatibility": "^(?<compatibility>.+-.+)-(?<version>.+)$",
