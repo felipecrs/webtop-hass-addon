@@ -1,19 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
+  "extends": ["config:recommended"],
   "dependencyDashboard": true,
-  "enabledManagers": [
-    "custom.regex"
-  ],
+  "enabledManagers": ["custom.regex"],
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/^Dockerfile$/",
-        "/^config.yaml$/"
-      ],
+      "managerFilePatterns": ["/^Dockerfile$/", "/^config.yaml$/"],
       "matchStrings": [
         "FROM ghcr.io/linuxserver/webtop:debian-xfce-(?<currentValue>.+)\\n",
         "version: (?<currentValue>.+)\\n"
