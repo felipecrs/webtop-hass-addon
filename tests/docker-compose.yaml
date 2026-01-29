@@ -1,0 +1,6 @@
+services:
+  webtop:
+    build: ..
+    volumes:
+      - ./options.json:/data/options.json
+    use_api_socket: true
