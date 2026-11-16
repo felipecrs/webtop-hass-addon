@@ -1,5 +1,5 @@
 # https://github.com/linuxserver/docker-webtop/releases?q=debian-xfce-
-FROM ghcr.io/linuxserver/webtop:debian-xfce-536c698c-ls219
+FROM ghcr.io/linuxserver/webtop:debian-xfce-670099a5-ls221
 
 COPY rootfs/ /
 
